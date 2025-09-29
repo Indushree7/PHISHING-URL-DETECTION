@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Phishing URL Detection</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>PHISHING URL DETECTION</h1>
+    <h1>{{r}}</h1>
+    <p id="resultValue" style="display:none;">{{ r }}</p>
+  </div>
+
+  <script>
+    // Wait until the DOM is fully loaded before executing the script
+    document.addEventListener('DOMContentLoaded', function () {
+      // Step 1: Get the integer value from the HTML element
+      const resultString = document.getElementById('resultValue').textContent;
+
+      // Step 2: Convert it to an integer
+      const result = parseInt(resultString, 10);
+
+      // Step 3: Display it or use it in JavaScript
+      console.log(result);
+    });
+  </script>
+</body>
+</html>
